@@ -1,0 +1,137 @@
+<script>
+      .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+h1 {
+    color: #000000;
+    text-shadow: 1px 1px 2px #00ff00, 0 0 25px #000000, 0 0 5px #00ff00;
+  }
+  </style>
+  <script>
+  function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let ms = today.getMilliseconds();
+  let day = today.getDate();
+ 
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+function blue(){ 
+ document.body.style.backgroundColor = "blue";
+}
+
+function green(){ 
+ document.body.style.backgroundColor = "green";
+}
+
+function red(){ 
+ document.body.style.backgroundColor = "red";
+}
+
+function purple(){ 
+ document.body.style.backgroundColor = "purple";
+}
+
+function yellow(){ 
+ document.body.style.backgroundColor = "yellow";
+}
+
+function oarnge(){ 
+ document.body.style.backgroundColor = "orange";
+}
+
+function blackBlue(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/ClockTab/main/blue.png')";
+}
+
+function blackGreen(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/ClockTab/main/green.png')";
+}
+
+function blackRed(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/Music_Tap/master/backgound.png')";
+}
+
+function blackPurple(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/Music_Tap/master/backgound.png')";
+}
+
+function blackYellow(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/Music_Tap/master/backgound.png')";
+}
+
+function blackOrange(){ 
+document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Bobzilla07/Music_Tap/master/backgound.png')";
+}
+
+<body onload="startTime()"> 
+
+  <center><h1><br><br><br><br><div id="txt"><br><div id="date"></h1></div></center>
+  
+  <div class="dropdown" style="float:right;">
+  <button class="dropbtn">Settings</button>
+  <div class="dropdown-content" style="right:0;">
+  <a href="#" <button onclick="blue()">Blue</button></a>
+   <a href="#" <button onclick="green()">Green</button></a>
+ <a href="#" <button onclick="red()">Red</button></a>
+ <a href="#" <button onclick="purple()">Purple</button></a>
+ <a href="#" <button onclick="yellow()">Yellow</button></a>
+  <a href="#" <button onclick="orange()">Oarnge</button></a>
+ <a href="#" <button onclick="blackBlue()">BlackBlue</button></a>
+  <a href="#" <button onclick="blackGreen()">BlackGreen</button></a>
+  <a href="#" <button onclick="blackRed()">BlackRed</button></a>
+ <a href="#" <button onclick="blackpurple()">BlackPurple</button></a>
+  <a href="#" <button onclick="blackYellow()">BlackYellow</button></a>
+ <a href="#" <button onclick="blackOrange()">BlackOrange</button></a>
+  </div>
+</div>
