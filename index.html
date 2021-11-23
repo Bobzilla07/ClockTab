@@ -55,11 +55,9 @@
   let m = today.getMinutes();
   let s = today.getSeconds();
   let ms = today.getMilliseconds();
-  let day = today.getDate();
  
   m = checkTime(m);
-  s = checkTime(s);
-  document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+  s = checkTime(s); document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
   setTimeout(startTime, 1000);
 }
 
